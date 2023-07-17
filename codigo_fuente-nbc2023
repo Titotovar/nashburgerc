@@ -93,3 +93,26 @@ combi=paqmed+paqpap                                   #costo paquete antojo comb
 compa=(hcla+d)*2+gc+cajb+(ref*2)                      #costo paquete antojo compartido
 comple=paqcom+paqpap+gc                               #costo paquete antojo completo                    
 combo=(hcla+d)*2+gc+(cajb*2)+(ref*2)                  #costo paquete antojo en combo
+
+#utilidades julio 2023 
+
+upaqpap=95-paqpap                                     #utilidad paquete papas
+upaqmed=115-paqmed                                    #utilidad paquete medio
+upaqalo=165-paqalo                                    #utilidad paquete alone
+upaqcom=180-paqcom                                    #utilidad paquete completo
+upaqyang=230-paqyang                                  #utilidad paquete yinyang
+
+upaqduo=230-paqduo                                    #utilidad paquete duo
+upaqduom=330-paqduom                                  #utilidad paquete duo +
+upaqpat=380-paqpat                                    #utilidad paquete pa' tres
+upaqfam=570-paqfam                                    #utilidad paquete familiar
+
+ucrepad=210-crepad                                    #utilidad paquete crepas para dos
+ucrepac=240-crepac                                    #utilidad paquete crepas para compartir
+ucrepar=320-crepar                                    #utilidad paquete crepas en pareja
+ucrepat=410-crepat                                    #utilidad paquete crepas para todos
+
+ucombi=200-combi                                      #utilidad paquete antojo combinado
+ucompa=260-compa                                      #utilidad paquete antojo compartido
+ucomple=300-comple                                    #utilidad paquete antojo completo                    
+ucombo=360-combo                                      #utilidad paquete antojo en combo
