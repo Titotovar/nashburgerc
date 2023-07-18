@@ -1,4 +1,60 @@
-#insumos hamburguesa
+#matriz de precios insumos y consideraciones nashburgerc, actualizado a julio 2023
+#inputs
+##outputs
+
+#ingreso precios corrientes 2022, ingreso manual
+
+#precios hamburguesas
+phcla=int(input('precio hamburguesa clásica: ')
+phtre=int(input('precio hamburguesa tres quesos: ')
+phche=int(input('precio hamburguesa cheddar: ')
+phesp=int(input('precio hamburguesa especial: ')
+phhaw=int(input('precio hamburguesa hawaii: ')
+phbon=int(input('precio hamburguesa boneless: ')
+phdob=int(input('precio hamburguesa doble: ')
+phcam=int(input('precio hamburguesa camarón: ')
+
+pbon=int(input('precio orden completa de boneless: ')
+pali=int(input('precio orden completa de alitas: ')
+pmbon=int(input('precio media orden boneless: ')
+pmali=int(input('precio media orden alitas: ')
+ppapf=int(input('precio orden de papas francesas: ')
+ppapg=int(input('precio orden de papas gajo: ')
+pmpapf=int(input('precio media orden papas frank: ')
+pmpapg=int(input('precio media orden papas gajo: ')
+pcajb=int(input('precio cajita frita boneless: ')
+pcajp=int(input('precio cajita frita papas: ')
+pcr=int(input('precio crepa malcolm preparada: ')
+pma=int(input('precio malteada v-c-f preparada: ')
+
+ppaqpap=int(input('precio paquete papas: ')
+ppaqmed=int(input('precio paquete medio: ')
+ppaqalo=int(input('precio paquete alone: ')
+ppaqcom=int(input('precio paquete completo: ')
+ppaqyang=int(input('precio paquete yinyang: ')
+
+ppaqduo=int(input('precio paquete dúo: ')
+ppaqduom=int(input('precio paquete dúo + : ')
+ppaqpat=int(input('precio paquete pa tres : ')
+ppaqfam=int(input('precio paquete familia : ')
+
+pcrepad=int(input('precio paquete crepas para dos : ')
+pcrepac=int(input('precio paquete crepas para compartir : ')
+pcrepar=int(input('precio paquete crepas en pareja : ')
+pcrepat=int(input('precio paquete crepas para todos : ')
+
+ppaqchido=int(input('precio paquete todo chido : ')
+ppaqbueno=int(input('precio paquete todo bueno : ')
+ppaqfino=int(input('precio paquete todo chido : ')
+ppaqrico=int(input('precio paquete todo rico : ')
+
+pcombi=int(input('precio paquete antojo combinado : ')
+pcompa=int(input('precio paquete antojo compartido : ')
+pcomple=int(input('precio paquete antojo completo  : ')
+pcombo=int(input('precio paquete antojo en combo  : ')
+
+
+##insumos hamburguesa
 
 p=5.50                                                #costo del pan 2023
 c=14.50                                               #costo de la carne 2023
@@ -18,7 +74,7 @@ do=5.66                                               #costo de doritos y ruffle
 pi=5.87                                               #costo de rodaja de piña
 ref=8.03                                              #costo unitario de refresco 
 
-#insumos boneless, fritos y extras
+##insumos boneless, fritos y extras
 
 b=46.42                                               #costo de orden de boneless
 al=40.00                                              #costo de orden de alitas
@@ -40,7 +96,7 @@ ni=7.75                                               #costo porción nieve malt
 u=p+a+v+t+g+d+gc                                      #todas las hamburguesas incluyen pan, aderezos, vegetales, tocino, 
                                                       #además del uso de gas, combustible y desechable
     
-#hamburguesas:
+##hamburguesas:
 
 hcla=u+c+qa                                           #hamburguesa clásica
 htre=u+c+qa+qb+qb                                     #hamburguesa 3 quesos
@@ -51,7 +107,7 @@ hbon=u+mb+j+qb                                        #hamburguesa boneless
 hdob=u+c+c+qb+qa                                      #hamburguesa doble
 hcam=u+c+qb+cam                                       #hamburguesa camarón
 
-#productos fritos y extra
+##productos fritos y extra
 
 bon=b+rb8+sa+ad+ac                                    #orden completa de boneless
 ali=al+rb8+sa+ad+ac                                   #orden completa de alitas
@@ -66,7 +122,7 @@ cajp=pf+rb1+sa+ad+ac+(mbon-rb8)                       #cajita frita papas
 cr=to+ph+nu                                           #crepa malcolm preparada
 ma=d+le+ni                                            #malteada v-c-f preparada
 
-#paquetes verdes, azules, rosas, morados y negros respectivamente
+##paquetes verdes, azules, rosas, morados y negros respectivamente
 
 paqpap=hcla+rb1+d+gc+ref+(pf/2)                       #costo paquete papas
 paqmed=hcla+rb1+d+gc+ref+(b/2)                        #costo paquete medio
@@ -94,25 +150,46 @@ compa=(hcla+d)*2+gc+cajb+(ref*2)                      #costo paquete antojo comp
 comple=paqcom+paqpap+gc                               #costo paquete antojo completo                    
 combo=(hcla+d)*2+gc+(cajb*2)+(ref*2)                  #costo paquete antojo en combo
 
-#utilidades julio 2023 
+##utilidades julio 2023 
 
-upaqpap=95-paqpap                                     #utilidad paquete papas
-upaqmed=115-paqmed                                    #utilidad paquete medio
-upaqalo=165-paqalo                                    #utilidad paquete alone
-upaqcom=180-paqcom                                    #utilidad paquete completo
-upaqyang=230-paqyang                                  #utilidad paquete yinyang
+uhcla=phcla-hcla                                      #utilidad hamburguesa clásica
+uhtre=phtre-htre                                      #utilidad hamburguesa tres quesos
+uhche=phche-hche                                      #utilidad hamburguesa cheddar
+uhesp=phesp-hesp                                      #utilidad hamburguesa especial
+uhhaw=phhaw-hhaw                                      #utilidad hamburguesa hawaii
+uhbon=phbon-hbon                                      #utilidad hamburguesa boneless
+uhcam=phcam-hcam                                      #utilidad hamburguesa camarón
+uhdob=phdob-hdob                                      #utilidad hamburguesa doble
+ubon=pbon-bon                                         #utilidad orden completa de boneless
+uali=pali-ali                                         #utilidad orden completa de alitas
+umbon=pmbon-mbon                                      #utilidad media orden boneless
+umali=pmali-mali                                      #utilidad media orden alitas
+upapf=ppapf-papf                                      #utilidad orden de papas francesas
+upapg=ppapg-papg                                      #utilidad orden de papas gajo
+umpapf=pmpapf-mpapf                                   #utilidad media orden papas frank
+umpapg=pmpapg-mpapg                                   #utilidad media orden papas gajo
+ucajb=pcajb-cajb                                      #utilidad cajita frita boneless
+ucajp=pcajp-cajp                                      #utilidad cajita frita papas
+ucr=pcr-cr                                            #utilidad crepa malcolm preparada
+uma=pma-ma                                            #utilidad malteada v-c-f preparada
 
-upaqduo=230-paqduo                                    #utilidad paquete duo
-upaqduom=330-paqduom                                  #utilidad paquete duo +
-upaqpat=380-paqpat                                    #utilidad paquete pa' tres
-upaqfam=570-paqfam                                    #utilidad paquete familiar
+upaqpap=ppaqpap-paqpap                                #utilidad paquete papas
+upaqmed=ppaqmed-paqmed                                #utilidad paquete medio
+upaqalo=ppaqalo-paqalo                                #utilidad paquete alone
+upaqcom=ppaqcom-paqcom                                #utilidad paquete completo
+upaqyang=ppaqyang-paqyang                             #utilidad paquete yinyang
 
-ucrepad=210-crepad                                    #utilidad paquete crepas para dos
-ucrepac=240-crepac                                    #utilidad paquete crepas para compartir
-ucrepar=320-crepar                                    #utilidad paquete crepas en pareja
-ucrepat=410-crepat                                    #utilidad paquete crepas para todos
+upaqduo=ppaqduo-paqduo                                #utilidad paquete duo
+upaqduom=ppaqduom-paqduom                             #utilidad paquete duo +
+upaqpat=ppaqpat-paqpat                                #utilidad paquete pa' tres
+upaqfam=ppaqfam-paqfam                                #utilidad paquete familiar
 
-ucombi=200-combi                                      #utilidad paquete antojo combinado
-ucompa=260-compa                                      #utilidad paquete antojo compartido
-ucomple=300-comple                                    #utilidad paquete antojo completo                    
-ucombo=360-combo                                      #utilidad paquete antojo en combo
+ucrepad=pcrepad-crepad                                #utilidad paquete crepas para dos
+ucrepac=pcrepac-crepac                                #utilidad paquete crepas para compartir
+ucrepar=pcrepar-crepar                                #utilidad paquete crepas en pareja
+ucrepat=pcrepat-crepat                                #utilidad paquete crepas para todos
+
+ucombi=pcombi-combi                                   #utilidad paquete antojo combinado
+ucompa=pcompa-compa                                   #utilidad paquete antojo compartido
+ucomple=pcomple-comple                                #utilidad paquete antojo completo                    
+ucombo=pcombo-combo                                   #utilidad paquete antojo en combo
